@@ -4,9 +4,9 @@ services:
     container_name: order-mysql
     environment:
       MYSQL_DATABASE: order_system
-      MYSQL_USER: order_user
-      MYSQL_PASSWORD: order_pass
-      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
     ports:
       - "3306:3306"
     volumes:
